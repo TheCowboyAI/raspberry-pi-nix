@@ -1,0 +1,27 @@
+{ pkgs, lib, ... }: {
+    raspberry-pi-nix.board = "bcm2711";
+    hardware = {
+      raspberry-pi = {
+        config = {
+          all = {
+            base-dt-params = {
+              BOOT_UART = {
+                value = 1;
+                enable = true;
+              };
+              uart_2ndstage = {
+                value = 1;
+                enable = true;
+              };
+            };
+            dt-overlays = {
+              disable-bt = {
+                enable = true;
+                params = { };
+              };
+            };
+          };
+        };
+      };
+    };
+}

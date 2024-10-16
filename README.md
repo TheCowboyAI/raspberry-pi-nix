@@ -1,3 +1,6 @@
+# CIM BRANCH
+**NOTE**: This is a dedicated branch for CIM
+
 # raspberry-pi-nix
 
 The primary goal of this flake is to make it easy to create
@@ -19,7 +22,7 @@ and `rpi/config.nix`. The other modules are mostly wrappers that set
 
 ## Example
 
-See the `rpi-example` config in this flake for a CI-checked example.
+See the `cim` config in this flake for a CI-checked example.
 
 ```nix
 {
