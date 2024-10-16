@@ -316,6 +316,8 @@ in
         ];
       initrd = {
         availableKernelModules = [
+          "vfat"
+          "ext4"
           "usbhid"
           "usb_storage"
           "vc4"

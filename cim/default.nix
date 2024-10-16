@@ -1,14 +1,12 @@
 { pkgs, lib, ... }: {
 
-  import = [
+  imports = [
     ./raspi.nix
     ./networking.nix
     ./audio.nix
+    ./users.nix
   ];
 
   time.timeZone = "America/Phoenix";
-
-  users.users.root.initialPassword = "root";
-  users.users.cim.initialPassword = "cim";
 
 }

@@ -1,6 +1,6 @@
 { pkgs, lib, ... }: {
   networking = {
-    hostName = "info";
+    hostName = "cluster";
     domain = "cim.thecowboy.ai";
     useDHCP = false;
     interfaces = {

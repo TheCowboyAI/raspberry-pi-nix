@@ -1,16 +1,19 @@
 { pkgs, lib, ... }: {
 
-  import = [
-    ../cim/raspi.nix
+  imports = [
     ./networking.nix
-    ../cim/audio.nix
   ];
 
   time.timeZone = "America/Phoenix";
 
   users.users.root.initialPassword = "root";
-  users.users.cim.initialPassword = "cim";
+  users.users.cim = {
+    initialPassword = "cim";
+    isNormalUser = true;
+  };
 
   security.rtkit.enable = true;
+
+  system.stateVersion = "24.05";
 
 }
